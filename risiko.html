@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peran Orang Tua dalam Deteksi dan Pencegahan Risiko pada Anak &mdash; Orang Tua Cerdas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --purple-dark:#2D1836;
+  --purple:#5C3E69;
+  --cream:#FFF4B1;
+  --white:#FFFFFF;
+  --black:#000000;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family:Arial, "Arial MT Pro", Helvetica, sans-serif;
+  background:var(--white);
+  color:#3a3a3a;
+}
+
+.container{
+  width:90%;
+  max-width:1180px;
+  margin:auto;
+}
+
+h1, h2, h3{
+  font-family:'Lora', serif;
+}
+
+/* NAV */
+.nav{
+  background:var(--purple-dark);
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand img{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 0 3px rgba(255,244,177,.35);
+}
+
+.brand span{
+  font-family:'Lora', serif;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.06em;
+  color:var(--cream);
+  text-transform:uppercase;
+}
+
+.back-link{
+  font-size:13px;
+  color:rgba(255,255,255,.75);
+  text-decoration:none;
+  letter-spacing:.03em;
+}
+
+.back-link:hover{ color:var(--cream); }
+
+/* ARTICLE HERO */
+.article-hero{
+  background:var(--purple);
+  padding:60px 0 0;
+}
+
+.eyebrow{
+  font-size:13px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--cream);
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.article-hero h1{
+  font-size:42px;
+  line-height:1.3;
+  font-weight:600;
+  color:var(--white);
+  max-width:780px;
+  margin-bottom:26px;
+}
+
+.meta{
+  display:flex;
+  gap:22px;
+  color:rgba(255,255,255,.65);
+  font-size:13px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  margin-bottom:0;
+}
+
+.meta span{ display:flex; align-items:center; gap:6px; }
+
+.hero-image-wrap{
+    max-width:850px;
+    margin:50px auto 0;
+    padding:0 20px;
+}
+
+.hero-image{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+/* ARTICLE BODY */
+.article-body{
+  max-width:760px;
+  margin:0 auto;
+  padding:60px 0 30px;
+}
+
+.article-body p{
+  font-size:17px;
+  line-height:1.9;
+  color:#454545;
+  margin-bottom:26px;
+}
+
+.drop-cap::first-letter{
+  font-family:'Lora', serif;
+  font-size:64px;
+  font-weight:700;
+  float:left;
+  line-height:.85;
+  padding:6px 10px 0 0;
+  color:var(--purple);
+}
+
+/* SECTION HEADING with icon badge */
+.section-heading{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:23px;
+  font-weight:600;
+  color:var(--purple-dark);
+  margin:50px 0 20px;
+  line-height:1.35;
+}
+
+.section-heading .badge{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--purple-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.section-heading .badge svg{
+  width:19px;
+  height:19px;
+}
+
+/* NUMBERED PRACTICAL LIST (with description) */
+.practical-list{
+  list-style:none;
+  margin:0 0 36px;
+  padding:0;
+  counter-reset:practical;
+}
+
+.practical-list li{
+  counter-increment:practical;
+  position:relative;
+  padding:2px 0 22px 54px;
+  border-bottom:1px solid #f1f1f1;
+  margin-bottom:22px;
+}
+
+.practical-list li:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.practical-list li::before{
+  content:counter(practical, decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:0;
+  font-family:'Lora', serif;
+  font-style:italic;
+  font-size:19px;
+  color:var(--purple);
+}
+
+.practical-list strong{
+  display:block;
+  font-family:'Lora', serif;
+  font-size:17px;
+  font-weight:600;
+  color:var(--purple-dark);
+  margin-bottom:6px;
+}
+
+.practical-list p{
+  font-size:15.5px;
+  line-height:1.75;
+  color:#5a5a5a;
+  margin:0;
+}
+
+/* CHECKMARK TIPS LIST */
+.tips-list{
+  list-style:none;
+  margin:0 0 36px;
+  padding:22px 26px;
+  background:#F7F4F9;
+  border-radius:18px;
+}
+
+.tips-list li{
+  position:relative;
+  padding:9px 0 9px 30px;
+  font-size:15.5px;
+  line-height:1.7;
+  color:#464646;
+}
+
+.tips-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:15px;
+  width:8px;
+  height:8px;
+  background:var(--cream);
+  border-radius:2px;
+  transform:rotate(45deg);
+}
+
+.tips-list strong{
+  color:var(--purple-dark);
+}
+
+.inline-figure{
+  margin:44px 0;
+}
+
+.inline-figure img{
+  width:60%;
+  display:block;
+  margin:0 auto;
+  border-radius:18px;
+}
+
+.inline-figure figcaption{
+  text-align:center;
+  font-size:13px;
+  color:#888;
+  margin-top:14px;
+  font-style:italic;
+}
+
+.pullquote{
+  margin:50px 0;
+  padding:36px 0;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  text-align:center;
+}
+
+.pullquote p{
+  font-family:'Lora', serif;
+  font-style:italic;
+  font-size:24px;
+  line-height:1.5;
+  color:var(--purple);
+  max-width:600px;
+  margin:0 auto;
+}
+
+.pullquote .mark{
+  width:34px;
+  height:2px;
+  background:var(--cream);
+  margin:0 auto 22px;
+  position:relative;
+}
+
+.pullquote .mark::after{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  width:7px; height:7px;
+  background:var(--purple);
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+
+/* SOURCE NOTE */
+.source-note{
+  font-size:13px;
+  line-height:1.75;
+  color:#8a8a8a;
+  font-style:italic;
+  border-left:3px solid var(--cream);
+  padding:4px 0 4px 18px;
+  margin:10px 0 36px;
+}
+
+.tags{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.tag{
+  font-size:12px;
+  color:var(--purple-dark);
+  background:#F4EEF6;
+  padding:7px 16px;
+  border-radius:30px;
+  letter-spacing:.02em;
+}
+
+/* NEXT ARTICLE STRIP */
+.next-strip{
+  background:var(--purple-dark);
+  padding:50px 0;
+  text-align:center;
+}
+
+.next-strip .eyebrow{ color:rgba(255,255,255,.5); }
+
+.next-strip a{
+  color:var(--white);
+  font-family:'Lora', serif;
+  font-size:22px;
+  font-weight:600;
+  text-decoration:none;
+  border-bottom:2px solid var(--cream);
+  padding-bottom:4px;
+}
+
+footer{
+  background:var(--black);
+  padding:34px 20px;
+  text-align:center;
+  color:rgba(255,255,255,.6);
+  font-size:13px;
+}
+
+footer strong{ color:var(--cream); }
+
+@media(max-width:650px){
+  .article-hero h1{ font-size:28px; }
+  .meta{ flex-wrap:wrap; gap:12px 20px; }
+  .inline-figure img{ width:100%; }
+  .pullquote p{ font-size:20px; }
+  .practical-list li{ padding-left:40px; }
+  .hero-image{ height:260px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="logo.png" alt="Logo">
+      <span>Orang Tua Cerdas</span>
+    </div>
+    <a href="welcome.html" class="back-link">&larr; Kembali ke Beranda</a>
+  </div>
+</div>
+
+<section class="article-hero">
+  <div class="container">
+    <div class="eyebrow">Fondasi Pengasuhan</div>
+    <h1>Peran Orang Tua dalam Deteksi dan Pencegahan Risiko pada Anak</h1>
+    <div class="meta">
+      <span>&#9998; Elvina, Tim KKN IDBU 04</span>
+      <span>Kategori: Parenting Dasar</span>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <img src="background-image:url('assets/images/risiko.jpeg')" class="hero-image" alt="Orang tua memperhatikan tumbuh kembang anak">
+  </div>
+</section>
+
+<article class="article-body">
+
+  <p class="drop-cap">Anak merupakan amanah sekaligus generasi penerus yang perlu dijaga, dilindungi, dan diarahkan agar tumbuh secara optimal, baik dari sisi fisik, psikologis, maupun sosial. Namun dalam proses tumbuh kembangnya, anak tidak lepas dari berbagai risiko yang dapat mengganggu perkembangannya. Di sinilah peran orang tua menjadi sangat menentukan, sebab merekalah pihak yang paling mungkin mengenali tanda bahaya sejak dini, sebelum risiko tersebut berkembang menjadi masalah yang lebih serius.</p>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3 4 6.5v5.2c0 4.6 3.2 8.4 8 9.3 4.8-.9 8-4.7 8-9.3V6.5Z"/>
+        <path d="M9.2 12.3 11 14l3.8-4"/>
+      </svg>
+    </span>
+    Apa yang Dimaksud Deteksi dan Pencegahan Risiko?
+  </h2>
+
+  <p>Deteksi risiko pada anak adalah proses mengenali tanda-tanda awal yang mengindikasikan adanya gangguan atau ancaman terhadap kesehatan, tumbuh kembang, maupun keselamatan anak. Tanda ini bisa muncul dalam bentuk perubahan perilaku, kondisi fisik, maupun kondisi lingkungan di sekitar anak, dan seringkali baru terlihat jelas apabila orang tua benar-benar memperhatikan keseharian anak dengan saksama.</p>
+
+  <p>Sementara itu, pencegahan risiko merupakan serangkaian upaya yang dilakukan lebih awal untuk menghindari atau mengurangi kemungkinan anak mengalami gangguan tersebut. Upaya ini mencakup langkah-langkah praktis sehari-hari, mulai dari komunikasi yang terbuka, pemenuhan kebutuhan dasar, hingga pengawasan terhadap lingkungan dan aktivitas anak.</p>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21c-4-2.7-8-5.6-8-9.8A4.7 4.7 0 0 1 8.6 6.6 4.9 4.9 0 0 1 12 8.2a4.9 4.9 0 0 1 3.4-1.6 4.7 4.7 0 0 1 4.6 4.6c0 4.2-4 7.1-8 9.8Z"/>
+      </svg>
+    </span>
+    Mengapa Peran Orang Tua Sangat Penting?
+  </h2>
+
+  <p>Orang tua merupakan orang yang paling dekat dengan anak sehingga memiliki kesempatan terbesar untuk mengenali perubahan sekecil apa pun, baik dari cara anak berbicara, bermain, maupun bersikap. Kedekatan inilah yang membuat orang tua menjadi lini pertama dalam melindungi anak, jauh sebelum pihak lain seperti guru, tenaga kesehatan, atau lingkungan sosial sempat menyadarinya. Semakin peka dan responsif orang tua, semakin cepat pula risiko dapat ditangani sebelum berdampak lebih jauh pada tumbuh kembang anak.</p>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 20V10M10 20V4M16 20v-7M22 20v-3"/>
+      </svg>
+    </span>
+    Jenis Risiko yang Dapat Dialami Anak
+  </h2>
+
+  <ol class="practical-list">
+    <li>
+      <strong>Risiko Kesehatan Fisik</strong>
+      <p>Meliputi gizi buruk, penyakit, kurang tidur, kurang imunisasi, hingga kebersihan yang kurang terjaga.</p>
+    </li>
+    <li>
+      <strong>Risiko Tumbuh Kembang</strong>
+      <p>Seperti keterlambatan bicara, hambatan motorik, kesulitan bersosialisasi, dan gangguan konsentrasi.</p>
+    </li>
+    <li>
+      <strong>Risiko Psikologis dan Emosional</strong>
+      <p>Misalnya stres, kecemasan, trauma, depresi, atau rendah diri akibat lingkungan yang tidak mendukung.</p>
+    </li>
+    <li>
+      <strong>Risiko Sosial</strong>
+      <p>Bullying, diskriminasi, penelantaran, maupun pergaulan negatif.</p>
+    </li>
+    <li>
+      <strong>Risiko Digital</strong>
+      <p>Paparan konten negatif, kecanduan gadget, cyberbullying, hingga penipuan online.</p>
+    </li>
+  </ol>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m20 20-3.5-3.5"/>
+      </svg>
+    </span>
+    Bagaimana Melakukan Deteksi Dini?
+  </h2>
+
+  <ul class="tips-list">
+    <li><strong>Amati perubahan perilaku</strong> seperti anak menjadi pendiam, mudah marah, atau kehilangan minat bermain.</li>
+    <li><strong>Perhatikan kondisi fisik</strong> seperti luka yang tidak jelas penyebabnya, perubahan berat badan, atau gangguan tidur.</li>
+    <li><strong>Pantau perkembangan sesuai usia</strong> agar keterlambatan dapat dikenali sejak dini.</li>
+    <li><strong>Dengarkan cerita anak</strong> dengan penuh perhatian tanpa langsung menghakimi.</li>
+    <li><strong>Kenali lingkungan anak</strong> baik di sekolah, rumah, maupun dunia digital.</li>
+  </ul>
+
+  <div class="pullquote">
+    <div class="mark"></div>
+    <p>&ldquo;Semakin dini risiko dikenali, semakin besar peluang anak memperoleh perlindungan dan penanganan yang tepat.&rdquo;</p>
+  </div>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/>
+        <path d="M4 21c1.5-3.5 4.5-5.5 8-5.5s6.5 2 8 5.5"/>
+      </svg>
+    </span>
+    Langkah Pencegahan yang Dapat Dilakukan Orang Tua
+  </h2>
+
+  <ol class="practical-list">
+    <li>
+      <strong>Membangun Komunikasi yang Terbuka</strong>
+      <p>Biarkan anak merasa aman untuk bercerita tanpa takut dimarahi.</p>
+    </li>
+    <li>
+      <strong>Memberikan Kasih Sayang dan Perhatian</strong>
+      <p>Pelukan, pujian, dan waktu bersama membantu membangun rasa aman.</p>
+    </li>
+    <li>
+      <strong>Menetapkan Aturan yang Jelas</strong>
+      <p>Aturan mengenai gadget, pergaulan, belajar, dan tidur perlu diterapkan secara konsisten.</p>
+    </li>
+    <li>
+      <strong>Menjaga Kesehatan Fisik Anak</strong>
+      <p>Pastikan kebutuhan gizi, olahraga, istirahat, dan imunisasi terpenuhi.</p>
+    </li>
+    <li>
+      <strong>Mengawasi Penggunaan Teknologi</strong>
+      <p>Dampingi anak saat menggunakan internet dan batasi screen time sesuai usia.</p>
+    </li>
+    <li>
+      <strong>Bekerja Sama dengan Sekolah dan Tenaga Profesional</strong>
+      <p>Segera berkonsultasi apabila ditemukan tanda-tanda yang mengkhawatirkan.</p>
+    </li>
+  </ol>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 9v4M12 17h.01"/>
+        <path d="M10.3 3.9 2.7 17.1a1.8 1.8 0 0 0 1.55 2.7h15.5a1.8 1.8 0 0 0 1.55-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/>
+      </svg>
+    </span>
+    Kapan Orang Tua Perlu Waspada?
+  </h2>
+
+  <ul class="tips-list">
+    <li>Perubahan perilaku yang sangat drastis.</li>
+    <li>Anak sering takut tanpa alasan yang jelas.</li>
+    <li>Gangguan tidur atau mimpi buruk berkepanjangan.</li>
+    <li>Menolak sekolah terus-menerus.</li>
+    <li>Luka atau tanda kekerasan yang tidak dapat dijelaskan.</li>
+    <li>Prestasi menurun secara tiba-tiba.</li>
+  </ul>
+
+  <div class="pullquote">
+    <div class="mark"></div>
+    <p>&ldquo;Perlindungan terbaik bagi anak dimulai dari perhatian, komunikasi, dan kepekaan orang tua setiap hari.&rdquo;</p>
+  </div>
+
+  <div class="tags">
+    <span class="tag">Parenting</span>
+    <span class="tag">Deteksi Dini</span>
+    <span class="tag">Perlindungan Anak</span>
+    <span class="tag">Pencegahan Risiko</span>
+  </div>
+
+  <p class="source-note">Dasar Hukum: Pasal 26 Undang-Undang Nomor 35 Tahun 2014 tentang Perlindungan Anak. Orang tua berkewajiban mengasuh, memelihara, mendidik, melindungi, dan menumbuhkembangkan anak sesuai kemampuan, bakat, serta minatnya.</p>
+
+</article>
+
+<section class="next-strip">
+  <div class="container">
+    <div class="eyebrow">Baca Selanjutnya</div>
+    <a href="screentime.html">Screen Time Anak: Peran Orang Tua sebagai Filter dalam Dunia Digital &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <strong>KKN IDBU 04 Universitas Diponegoro 2026</strong><br>
+  Edukasi Parenting &middot; Orang Tua Cerdas, Anak Tumbuh Berkualitas
+</footer>
+
+</body>
+</html>

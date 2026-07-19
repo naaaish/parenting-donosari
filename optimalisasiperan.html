@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optimalisasi Peran Orang Tua melalui Edukasi Parenting &mdash; Orang Tua Cerdas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --purple-dark:#2D1836;
+  --purple:#5C3E69;
+  --cream:#FFF4B1;
+  --white:#FFFFFF;
+  --black:#000000;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{ scroll-behavior:smooth; }
+
+body{
+  font-family:Arial, "Arial MT Pro", Helvetica, sans-serif;
+  background:var(--white);
+  color:#3a3a3a;
+}
+
+.container{
+  width:90%;
+  max-width:1180px;
+  margin:auto;
+}
+
+h1, h2, h3{
+  font-family:'Lora', serif;
+}
+
+/* NAV */
+.nav{
+  background:var(--purple-dark);
+}
+
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:22px 0;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand img{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 0 3px rgba(255,244,177,.35);
+}
+
+.brand span{
+  font-family:'Lora', serif;
+  font-weight:600;
+  font-size:14px;
+  letter-spacing:.06em;
+  color:var(--cream);
+  text-transform:uppercase;
+}
+
+.back-link{
+  font-size:13px;
+  color:rgba(255,255,255,.75);
+  text-decoration:none;
+  letter-spacing:.03em;
+}
+
+.back-link:hover{ color:var(--cream); }
+
+/* ARTICLE HERO */
+.article-hero{
+  background:var(--purple);
+  padding:60px 0 0;
+}
+
+.eyebrow{
+  font-size:13px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--cream);
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.article-hero h1{
+  font-size:40px;
+  line-height:1.3;
+  font-weight:600;
+  color:var(--white);
+  max-width:780px;
+  margin-bottom:26px;
+}
+
+.meta{
+  display:flex;
+  gap:22px;
+  color:rgba(255,255,255,.65);
+  font-size:13px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(255,255,255,.15);
+  margin-bottom:0;
+}
+
+.meta span{ display:flex; align-items:center; gap:6px; }
+
+.hero-image-wrap{
+    max-width:850px;
+    margin:50px auto 0;
+    padding:0 20px;
+}
+
+.hero-image{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+/* ARTICLE BODY */
+.article-body{
+  max-width:760px;
+  margin:0 auto;
+  padding:60px 0 30px;
+}
+
+.article-body p{
+  font-size:17px;
+  line-height:1.9;
+  color:#454545;
+  margin-bottom:26px;
+}
+
+.drop-cap::first-letter{
+  font-family:'Lora', serif;
+  font-size:64px;
+  font-weight:700;
+  float:left;
+  line-height:.85;
+  padding:6px 10px 0 0;
+  color:var(--purple);
+}
+
+/* SECTION HEADING with icon badge */
+.section-heading{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:23px;
+  font-weight:600;
+  color:var(--purple-dark);
+  margin:50px 0 20px;
+  line-height:1.35;
+}
+
+.section-heading .badge{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:var(--purple-dark);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.section-heading .badge svg{
+  width:19px;
+  height:19px;
+}
+
+/* NUMBERED PRACTICAL LIST (with description) */
+.practical-list{
+  list-style:none;
+  margin:0 0 36px;
+  padding:0;
+  counter-reset:practical;
+}
+
+.practical-list li{
+  counter-increment:practical;
+  position:relative;
+  padding:2px 0 22px 54px;
+  border-bottom:1px solid #f1f1f1;
+  margin-bottom:22px;
+}
+
+.practical-list li:last-child{
+  border-bottom:none;
+  margin-bottom:0;
+  padding-bottom:0;
+}
+
+.practical-list li::before{
+  content:counter(practical, decimal-leading-zero);
+  position:absolute;
+  left:0;
+  top:0;
+  font-family:'Lora', serif;
+  font-style:italic;
+  font-size:19px;
+  color:var(--purple);
+}
+
+.practical-list strong{
+  display:block;
+  font-family:'Lora', serif;
+  font-size:17px;
+  font-weight:600;
+  color:var(--purple-dark);
+  margin-bottom:6px;
+}
+
+.practical-list p{
+  font-size:15.5px;
+  line-height:1.75;
+  color:#5a5a5a;
+  margin:0;
+}
+
+/* TIPS LIST */
+.tips-list{
+  list-style:none;
+  margin:0 0 36px;
+  padding:22px 26px;
+  background:#F7F4F9;
+  border-radius:18px;
+}
+
+.tips-list li{
+  position:relative;
+  padding:9px 0 9px 30px;
+  font-size:15.5px;
+  line-height:1.7;
+  color:#464646;
+}
+
+.tips-list li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:15px;
+  width:8px;
+  height:8px;
+  background:var(--cream);
+  border-radius:2px;
+  transform:rotate(45deg);
+}
+
+.tips-list strong{
+  color:var(--purple-dark);
+}
+
+.inline-figure{
+  margin:44px 0;
+}
+
+.inline-figure img{
+  width:60%;
+  display:block;
+  margin:0 auto;
+  border-radius:18px;
+}
+
+.inline-figure figcaption{
+  text-align:center;
+  font-size:13px;
+  color:#888;
+  margin-top:14px;
+  font-style:italic;
+}
+
+.pullquote{
+  margin:50px 0;
+  padding:36px 0;
+  border-top:1px solid #eee;
+  border-bottom:1px solid #eee;
+  text-align:center;
+}
+
+.pullquote p{
+  font-family:'Lora', serif;
+  font-style:italic;
+  font-size:24px;
+  line-height:1.5;
+  color:var(--purple);
+  max-width:600px;
+  margin:0 auto;
+}
+
+.pullquote .mark{
+  width:34px;
+  height:2px;
+  background:var(--cream);
+  margin:0 auto 22px;
+  position:relative;
+}
+
+.pullquote .mark::after{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  width:7px; height:7px;
+  background:var(--purple);
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+
+/* SOURCE NOTE */
+.source-note{
+  font-size:13px;
+  line-height:1.75;
+  color:#8a8a8a;
+  font-style:italic;
+  border-left:3px solid var(--cream);
+  padding:4px 0 4px 18px;
+  margin:10px 0 36px;
+}
+
+.tags{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.tag{
+  font-size:12px;
+  color:var(--purple-dark);
+  background:#F4EEF6;
+  padding:7px 16px;
+  border-radius:30px;
+  letter-spacing:.02em;
+}
+
+/* NEXT ARTICLE STRIP */
+.next-strip{
+  background:var(--purple-dark);
+  padding:50px 0;
+  text-align:center;
+}
+
+.next-strip .eyebrow{ color:rgba(255,255,255,.5); }
+
+.next-strip a{
+  color:var(--white);
+  font-family:'Lora', serif;
+  font-size:22px;
+  font-weight:600;
+  text-decoration:none;
+  border-bottom:2px solid var(--cream);
+  padding-bottom:4px;
+}
+
+footer{
+  background:var(--black);
+  padding:34px 20px;
+  text-align:center;
+  color:rgba(255,255,255,.6);
+  font-size:13px;
+}
+
+footer strong{ color:var(--cream); }
+
+@media(max-width:650px){
+  .article-hero h1{ font-size:28px; }
+  .meta{ flex-wrap:wrap; gap:12px 20px; }
+  .inline-figure img{ width:100%; }
+  .pullquote p{ font-size:20px; }
+  .practical-list li{ padding-left:40px; }
+  .hero-image{ height:260px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="logo.png" alt="Logo">
+      <span>Orang Tua Cerdas</span>
+    </div>
+    <a href="welcome.html" class="back-link">&larr; Kembali ke Beranda</a>
+  </div>
+</div>
+
+<section class="article-hero">
+  <div class="container">
+    <div class="eyebrow">Fondasi Pengasuhan</div>
+    <h1>Optimalisasi Peran Orang Tua melalui Edukasi Parenting</h1>
+    <div class="meta">
+      <span>&#9998; Elvina, Tim KKN IDBU 04</span>
+      <span>Kategori: Parenting Dasar</span>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <img src="background-image:url('assets/images/optimalisasiperan.jpeg')" class="hero-image" alt="Orang tua belajar bersama tentang edukasi parenting">
+  </div>
+</section>
+
+<article class="article-body">
+
+  <p class="drop-cap">Edukasi parenting merupakan proses pembelajaran yang membantu orang tua meningkatkan pengetahuan, keterampilan, dan kepercayaan diri dalam mengasuh anak. Orang tua sebagai pendidik pertama memiliki peran penting dalam mendukung tumbuh kembang anak, sehingga pemahaman tentang pola asuh yang tepat menjadi bekal utama dalam menciptakan lingkungan keluarga yang sehat, aman, dan penuh kasih sayang.</p>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m20 20-3.5-3.5"/>
+      </svg>
+    </span>
+    Mengapa Edukasi Parenting Penting?
+  </h2>
+
+  <p>Menjadi orang tua tidak disertai dengan buku petunjuk. Setiap anak memiliki karakter, kebutuhan, dan tahapan perkembangan yang berbeda. Oleh karena itu, orang tua perlu terus belajar agar mampu memahami cara mendampingi anak secara tepat sesuai usianya.</p>
+
+  <p>Edukasi parenting membantu orang tua memahami perkembangan fisik, emosional, sosial, dan kognitif anak. Dengan pengetahuan tersebut, orang tua dapat mengambil keputusan yang lebih bijaksana dalam menghadapi berbagai tantangan pengasuhan, mulai dari membangun komunikasi yang baik hingga menyelesaikan konflik secara positif.</p>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21c-4-2.7-8-5.6-8-9.8A4.7 4.7 0 0 1 8.6 6.6 4.9 4.9 0 0 1 12 8.2a4.9 4.9 0 0 1 3.4-1.6 4.7 4.7 0 0 1 4.6 4.6c0 4.2-4 7.1-8 9.8Z"/>
+      </svg>
+    </span>
+    Manfaat Edukasi Parenting
+  </h2>
+
+  <ol class="practical-list">
+    <li>
+      <strong>Memahami Kebutuhan Anak Sesuai Tahap Perkembangan</strong>
+      <p>Orang tua menjadi lebih peka terhadap perubahan fisik, emosi, dan perilaku anak sehingga dapat memberikan pendampingan yang sesuai dengan usianya.</p>
+    </li>
+    <li>
+      <strong>Menerapkan Pola Asuh yang Positif</strong>
+      <p>Edukasi parenting membantu orang tua membangun disiplin tanpa kekerasan, memberikan penghargaan yang tepat, serta menciptakan suasana keluarga yang hangat dan penuh kasih sayang.</p>
+    </li>
+    <li>
+      <strong>Meningkatkan Kepercayaan Diri Orang Tua</strong>
+      <p>Pengetahuan yang dimiliki membuat orang tua lebih yakin dalam mengambil keputusan ketika menghadapi berbagai tantangan dalam pengasuhan.</p>
+    </li>
+    <li>
+      <strong>Mempererat Hubungan Orang Tua dan Anak</strong>
+      <p>Komunikasi yang terbuka dan hubungan emosional yang baik membuat anak merasa aman untuk bercerita, bertanya, maupun menyampaikan perasaannya.</p>
+    </li>
+    <li>
+      <strong>Mendukung Tumbuh Kembang Anak Secara Optimal</strong>
+      <p>Anak yang tumbuh dalam lingkungan pengasuhan yang positif cenderung memiliki perkembangan sosial, emosional, akademik, dan karakter yang lebih baik.</p>
+    </li>
+  </ol>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="7" y="2.5" width="10" height="19" rx="2"/>
+        <path d="M10 8.5h4M10 11h4M10 13.5h2.5"/>
+      </svg>
+    </span>
+    Bentuk Edukasi Parenting
+  </h2>
+
+  <ul class="tips-list">
+    <li><strong>Seminar dan penyuluhan</strong> yang diselenggarakan oleh sekolah, puskesmas, posyandu, maupun komunitas parenting.</li>
+    <li><strong>Kelas parenting</strong> yang membahas pola asuh sesuai tahap usia anak dan berbagai tantangan pengasuhan sehari-hari.</li>
+    <li><strong>Media digital</strong> seperti webinar, website edukasi, aplikasi parenting, podcast, maupun media sosial dari sumber yang terpercaya.</li>
+    <li><strong>Buku dan artikel ilmiah</strong> yang membahas perkembangan anak serta strategi pengasuhan berbasis penelitian.</li>
+  </ul>
+
+  <div class="pullquote">
+    <div class="mark"></div>
+    <p>&ldquo;Orang tua yang terus belajar akan lebih siap membimbing anak menghadapi perubahan zaman dan tantangan kehidupan.&rdquo;</p>
+  </div>
+
+  <h2 class="section-heading">
+    <span class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFF4B1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3 4 6.5v5.2c0 4.6 3.2 8.4 8 9.3 4.8-.9 8-4.7 8-9.3V6.5Z"/>
+        <path d="M9.2 12.3 11 14l3.8-4"/>
+      </svg>
+    </span>
+    Tantangan dan Solusi
+  </h2>
+
+  <ol class="practical-list">
+    <li>
+      <strong>Kesibukan Bekerja</strong>
+      <p>Luangkan waktu mengikuti webinar, membaca artikel, atau mendengarkan podcast parenting yang dapat diakses kapan saja.</p>
+    </li>
+    <li>
+      <strong>Keterbatasan Akses Informasi</strong>
+      <p>Pilih sumber edukasi dari tenaga profesional, lembaga kesehatan, sekolah, atau instansi pemerintah yang terpercaya.</p>
+    </li>
+    <li>
+      <strong>Perbedaan Pola Asuh dalam Keluarga</strong>
+      <p>Bangun komunikasi yang baik antaranggota keluarga agar memiliki tujuan pengasuhan yang sama demi kepentingan terbaik bagi anak.</p>
+    </li>
+    <li>
+      <strong>Kesulitan Menerapkan Ilmu yang Diperoleh</strong>
+      <p>Terapkan perubahan secara bertahap dan konsisten. Tidak perlu langsung sempurna, yang terpenting adalah terus belajar dan memperbaiki pola pengasuhan.</p>
+    </li>
+  </ol>
+
+  <div class="pullquote">
+    <div class="mark"></div>
+    <p>&ldquo;Edukasi parenting adalah investasi jangka panjang bagi keluarga. Orang tua yang terus belajar akan lebih siap mendampingi anak tumbuh menjadi pribadi yang sehat, mandiri, dan berkarakter.&rdquo;</p>
+  </div>
+
+  <div class="tags">
+    <span class="tag">Parenting</span>
+    <span class="tag">Pola Asuh</span>
+    <span class="tag">Keluarga</span>
+    <span class="tag">Edukasi Orang Tua</span>
+  </div>
+
+  <p class="source-note">Edukasi parenting dapat diperoleh melalui berbagai sumber terpercaya seperti Kementerian Kesehatan RI, Ikatan Dokter Anak Indonesia (IDAI), Badan Kependudukan dan Keluarga Berencana Nasional (BKKBN), serta berbagai program pendidikan keluarga yang diselenggarakan oleh sekolah, puskesmas, dan komunitas parenting.</p>
+
+</article>
+
+<section class="next-strip">
+  <div class="container">
+    <div class="eyebrow">Baca Selanjutnya</div>
+    <a href="deteksirisiko.html">Peran Orang Tua dalam Deteksi dan Pencegahan Risiko pada Anak &rarr;</a>
+  </div>
+</section>
+
+<footer>
+  <strong>KKN IDBU 04 Universitas Diponegoro 2026</strong><br>
+  Edukasi Parenting &middot; Orang Tua Cerdas, Anak Tumbuh Berkualitas
+</footer>
+
+</body>
+</html>
